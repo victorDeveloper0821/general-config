@@ -13,3 +13,5 @@
 [github]
     user = victorlikecode
     token = token
+[core]
+        excludesfile = ~/.gitignore_global
