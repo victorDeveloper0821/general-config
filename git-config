@@ -1,0 +1,15 @@
+[user]
+    name = Victor Tsai
+    email = princeoftennis735@@gmail.com
+    username = victorlikecode
+
+[init]
+    defaultBranch = main
+
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[github]
+    user = victorlikecode
+    token = token
