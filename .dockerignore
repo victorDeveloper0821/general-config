@@ -1,0 +1,20 @@
+## ignore git repos file
+.git/
+*.md
+
+## file system temp
+.DS_Store
+.idea
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# maven project
+.mvn/
+
+## eclipse ignore
+.settings/
+.project
+.classpath
+Dockerfile
