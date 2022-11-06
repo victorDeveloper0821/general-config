@@ -1,6 +1,6 @@
 ## ignore setting in VSCode
 .vscode/
-.code-workspace
+*.code-workspace
 
 ## ignore java project in intellij
 .DS_Store
