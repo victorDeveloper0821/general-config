@@ -9,6 +9,8 @@ HOME_DIR=`echo $HOME`
 LOG_DIR="/opt/auto_shell"
 LOG_NAME="AutoInstallJava.log"
 TIMESTAMP=`date +"%Y-%m-%d"`
+
+JAVA_TAR_PATH="${HOME_DIR}/java_install"
 JAVA_DIST_PATH=""
 
 ## log rotation
@@ -24,8 +26,8 @@ else
 fi
 
 ## initialize install path for tar.gz
-if [ ! -d "${HOME_DIR}/java_install" ]; then
-    echo "Java Install Path: ${HOME_DIR}/java_install not exist"
+if [ ! -d "${JAVA_TAR_PATH}" ]; then
+    echo "Java Install Path: ${JAVA_TAR_PATH} not exist"
     exit 1
 fi
 
