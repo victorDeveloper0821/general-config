@@ -28,7 +28,7 @@ fi
 ## initialize install path for tar.gz
 if [ ! -d "${JAVA_TAR_PATH}" ]; then
     echo "Java Install Path: ${JAVA_TAR_PATH} not exist"
-    exit 1
+#    exit 1
 fi
 
 
