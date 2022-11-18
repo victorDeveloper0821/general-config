@@ -6,7 +6,7 @@ KERNEL=`uname`
 HOME_DIR=`echo $HOME`
 
 # LOG INFO
-LOG_DIR="/opt/auto_shell"
+LOG_DIR="${HOME}/auto_shell"
 LOG_NAME="AutoInstallJava.log"
 TIMESTAMP=`date +"%Y-%m-%d"`
 SHELL_LOG="${LOG_DIR}/${LOG_NAME}"
@@ -35,7 +35,10 @@ if [ ! -d "${JAVA_TAR_PATH}" ]; then
 else
     cd ${JAVA_TAR_PATH}
     tarballs=`ls *.tar.gz` # list all tar.gz files
-    for tar in ${tarballs} do tar -zxvf ${tar} -C ${JDK_STORED_PATH} done # unzip files to dsetination
+
+    for tarf in ${tarballs} do tar -zxvf ${tar} -C ${JDK_STORED_PATH}  done; 
+# unzip files to dsetination
+
 fi
 
 
