@@ -42,14 +42,24 @@ do
     ## ceate submodule
     hash=`git subtree split --prefix ${mod_pefix}/${subRepo}`
     
-    ## checkout as new banch 
-    git checkout -b ${subRepo} ${hash}
-
+    result=$?
+    if [ $result -ne 0 ]; then
+       echo "error execution fail";
+       exit -1 
+    else
+       ## checkout as new banch 
+       git checkout -b ${subRepo} ${hash}
+    fi
     git pull ${subRepo} migration --allow-unrelated-histories
     
-    ## push to new epo
-    git push -u ${subRepo} ${subRepo}:migration
-    
+    result=$?
+    if [ $result -ne 0 ]; then
+      echo "error execution fail";
+      exit -1 
+    else
+     ## push to new repo
+     git push -u ${subRepo} ${subRepo}:migration
+    fi
     ## git checkout to main banch
     git checkout main
 done
