@@ -45,6 +45,7 @@ do
     result=$?
     if [ $result -ne 0 ]; then
        echo "error execution fail";
+    git checkout main
        exit -1 
     else
        ## checkout as new banch 
@@ -55,6 +56,7 @@ do
     result=$?
     if [ $result -ne 0 ]; then
       echo "error execution fail";
+    git checkout main
       exit -1 
     else
      ## push to new repo
